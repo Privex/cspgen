@@ -1,0 +1,4 @@
+privex-helpers>=3.2.0
+privex-loghelper>=1.0.0
+colorama
+rich

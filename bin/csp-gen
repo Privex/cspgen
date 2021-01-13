@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""
++===================================================+
+|                 © 2021 Privex Inc.                |
+|               https://www.privex.io               |
++===================================================+
+|                                                   |
+|    CSPGen - Python Content Sec Policy Generator   |
+|    License: X11/MIT                               |
+|                                                   |
+|      Core Developer(s):                           |
+|                                                   |
+|        (+)  Chris (@someguy123) [Privex]          |
+|                                                   |
++===================================================+
+
+CSPGen - A Python tool for generating Content Security Policies without constantly repeating yourself.
+
+    Official Repo:  https://github.com/Privex/cspgen
+    Python package: privex-cspgen
+    To update:      sudo -H python3 -m pip install -U privex-cspgen
+
+Copyright (c) 2021    Privex Inc. ( https://www.privex.io )
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of
+the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name(s) of the above copyright holders shall not be used in advertising or
+otherwise to promote the sale, use or other dealings in this Software without prior written authorization.
+"""
+import sys
+
+
+def _err(*args, file=sys.stderr, **kwargs):
+    return print(*args, file=file, **kwargs)
+
+
+try:
+    from privex.cspgen.cli import cli
+except ImportError as e:
+    _err(f" [!!!] Failed to import 'privex.cspgen'. You may need to run 'pip3 install -U privex-cspgen' or "
+         f"'python3 -m pip install -U 'privex-cspgen'\n")
+    _err(f" [!!!] Exception was: {type(e)} - {str(e)} \n\n")
+    sys.exit(1)
+    
+cli()

@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+privex-helpers = ">=3.2.0"
+privex-loghelper = ">=1.0.0"
+colorama = "*"
+rich = "*"
+
+
+[dev-packages]
+twine = "*"
+wheel = "*"
+setuptools = "*"
+jupyter = "*"
+pytest = "*"
+pytest-cov = "*"
+codecov = "*"
+coverage = "*"
+
+
+[requires]
+python_version = "3.8"

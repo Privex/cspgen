@@ -1,0 +1,14 @@
+privex-helpers>=3.2.0
+privex-loghelper>=1.0.0
+colorama
+rich
+
+# nice to have for dev
+twine
+setuptools
+wheel
+jupyter
+pytest
+pytest-cov
+codecov
+coverage
