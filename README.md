@@ -1,7 +1,6 @@
 # Privex Content Security Policy Generator (CSP Gen)
 
-[![Build Status](https://travis-ci.com/Privex/cspgen.svg?branch=master)](https://travis-ci.com/Privex/cspgen) 
-[![Codecov](https://img.shields.io/codecov/c/github/Privex/cspgen)](https://codecov.io/gh/Privex/cspgen)  
+[![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/privex/cspgen?label=docker%20img%20size&logo=docker&sort=date)](https://hub.docker.com/r/privex/cspgen)
 [![PyPi Version](https://img.shields.io/pypi/v/privex-cspgen.svg)](https://pypi.org/project/privex-cspgen/)
 ![License Button](https://img.shields.io/pypi/l/privex-cspgen) 
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/privex-cspgen)
