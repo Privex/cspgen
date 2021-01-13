@@ -92,6 +92,9 @@ class CSPBuilder:
         self.flags = ''
         self.excluded = kwargs.get('excluded', ['flags', 'groups', 'DEFAULT'])
         self.cleaned = False
+        # self.section_split = kwargs.get('section_split', ': ')
+        self.section_split = kwargs.get('section_split', ' ')
+        
 
     @property
     def sections(self) -> list:
@@ -141,7 +144,7 @@ class CSPBuilder:
         self.autoclean()
         sec = self.config_dict.get(name, None)
         if not sec: return None
-        s = f"{name}: {sec.get('zones', '')}"
+        s = f"{name}{self.section_split}{sec.get('zones', '')}"
         if is_true(sec.get('unsafe-eval', False)): s += " 'unsafe-eval'"
         if is_true(sec.get('unsafe-inline', False)): s += " 'unsafe-inline'"
         s += ';'
